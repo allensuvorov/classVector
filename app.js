@@ -9,27 +9,26 @@ class Vector {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-    }
+    };
 
     plus(anotherVector) {
         if (!(anotherVector instanceof Vector)) {
             throw new Error;      
         }    
         return new Vector(this.x + anotherVector.x, this.y + anotherVector.y);
-    }
+    };
 
     minus(anotherVector) {
         if (!(anotherVector instanceof Vector)) {
             throw new Error;      
         }
         return new Vector(this.x + anotherVector.x, this.y + anotherVector.y);
-    }
+    };
 
     get length () {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2)); 
-    }
-}
+    };
+};
   
 console.log(new Vector(1, 2).plus(new Vector(2, 3)));
-
 console.log(`Length: ${new Vector(3, 4).length}`);
